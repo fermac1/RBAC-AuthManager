@@ -71,11 +71,11 @@ This section contains an explanation of the tools used in this project.
     `php artisan migrate`
 
     `php artisan db:seed`
-    
+
 - Start the Laravel development server.
     `php artisan serve`
 
-The application should now be running on the address specified in the terminal.
 
 
-THANK YOU.
+
+

@@ -12,7 +12,7 @@
             @csrf
             <div class="form-group col-12 mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" id="email" value="{{old('email')}}">
+                <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}">
                 @if ($errors->has('email'))
                     <div class="text-danger text-left">{{ $errors->first('email') }}</div>
                 @endif

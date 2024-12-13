@@ -31,10 +31,12 @@ class ForgotPasswordController extends Controller
             $resetLink = route('password.reset.form', ['token' => $token]);
             Mail::to($user->email)->send(new PasswordResetMail($resetLink));
 
-            return redirect('/forgot-password')->with('success', 'Password reset link sent to your email.');
+            return back()->with('success', 'Password reset link sent to your email.');
+        }else{
+
+            return back()->with('error', 'User not found');
         }
 
-        return redirect('/forgot-password')->with('error', 'User not found');
 
     }
 
@@ -65,7 +67,7 @@ class ForgotPasswordController extends Controller
 
             return redirect('/')->with('success', 'Password successfully updated');
         } catch (\Exception $e) {
-            return redirect('/forgot-password')->with('error', 'Invalid or expired token');
+            return back()->with('error', 'Invalid or expired token');
         }
     }
 }

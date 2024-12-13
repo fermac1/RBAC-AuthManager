@@ -57,8 +57,12 @@ table{
     box-shadow: none;
 }
 .btn {
-    background-color: blue;
+    background-color: #0000A8;
     color: #fff;
+}
+.btn:hover {
+    color: #fff;
+    background-color: #00008B;
 }
 
 .fade-out-message {
